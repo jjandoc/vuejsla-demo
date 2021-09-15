@@ -1,12 +1,6 @@
 <template>
   <div>
-    <div class="h-72 mb-8 mx-auto rounded-full overflow-hidden w-72">
-      <img
-        alt="Grogu"
-        src="../assets/grogu.png"
-        class="h-72 object-cover w-72"
-      />
-    </div>
+    <BabyYoda class="mb-8 mx-auto" />
     <h1 class="font-bold mb-4 text-2xl text-center">
       Characters from Star Wars
     </h1>
@@ -21,3 +15,11 @@
     </ul>
   </div>
 </template>
+
+<script>
+import BabyYoda from "@/components/BabyYoda";
+
+export default {
+  components: { BabyYoda },
+};
+</script>

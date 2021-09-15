@@ -1,12 +1,11 @@
-import { computed, readonly, reactive, ref } from "vue";
-import api from "@/services/api";
-import getEntityId from "@/util/getEntityId";
+import { computed, readonly, reactive, ref } from 'vue';
+import api from '@/services/api';
+import getEntityId from '@/util/getEntityId';
 
 const data = reactive({});
+const hasFetchedAll = ref(false);
 
 const usePeople = () => {
-  const hasFetchedAll = ref(false);
-
   const fetchPeople = async () => {
     const response = await api.fetchPeople();
     response.forEach((person) => {
